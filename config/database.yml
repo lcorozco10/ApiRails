@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: rails
-  password: 123456789
+  username: roots
+  password: roots
   host: localhost
 
 development:
