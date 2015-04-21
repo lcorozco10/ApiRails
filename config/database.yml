@@ -14,19 +14,19 @@ default: &default
   encoding: utf8
   pool: 5
   username: rails
-  password: xZosfEyaeT7PMmgfYOQTdsHjkR
-  host: ec2-107-22-161-155.compute-1.amazonaws.com
+  password: 123456789
+  host: localhost
 
 development:
   <<: *default
-  database: dc438um9p2jrl0
+  database: railsbd
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: dc438um9p2jrl0
+  database: railsbd
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: dc438um9p2jrl0
-  username: niwgxtzdgvvhxx
+  database: ApiRails_production
+  username: ApiRails
   password: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
