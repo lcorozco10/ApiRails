@@ -10,23 +10,23 @@
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
 default: &default
-  adapter: mysql2
+  adapter: postgresql
   encoding: utf8
   pool: 5
   username: rails
-  password: 123456789
-  host: localhost
+  password: xZosfEyaeT7PMmgfYOQTdsHjkR
+  host: ec2-107-22-161-155.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: railsbd
+  database: dc438um9p2jrl0
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: railsbd
+  database: dc438um9p2jrl0
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: ApiRails_production
-  username: ApiRails
+  database: dc438um9p2jrl0
+  username: niwgxtzdgvvhxx
   password: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
