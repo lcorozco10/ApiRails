@@ -13,13 +13,13 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: niwgxtzdgvvhxx
-  password: xZosfEyaeT7PMmgfYOQTdsHjkR
+  username: root
+  password: root
   host: ec2-107-22-161-155.compute-1.amazonaws.com
 
 development:
   <<: *default
-  database: dc438um9p2jrl0
+  database: railsbd
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
