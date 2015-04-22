@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: dc438um9p2jrl0
-  username: niwgxtzdgvvhxx
+  database: <%= ENV['APIRAILS_DATABASE_NAME'] %>
+  username: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
   password: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
