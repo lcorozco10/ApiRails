@@ -13,9 +13,10 @@ default: &default
   adapter: postgresql
   encoding: utf8
   pool: 5
-  username: root
+  host: localhost
+  username: postgres
   password: root
-  host: ec2-107-22-161-155.compute-1.amazonaws.com
+
 
 development:
   <<: *default
@@ -49,6 +50,7 @@ test:
 #
 production:
   <<: *default
+  host: ec2-107-22-161-155.compute-1.amazonaws.com
   database: <%= ENV['APIRAILS_DATABASE_NAME'] %>
   username: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
   password: <%= ENV['APIRAILS_DATABASE_PASSWORD'] %>
