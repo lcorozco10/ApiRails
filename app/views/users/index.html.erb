@@ -1,6 +1,7 @@
 <h1>Hello, Rails!</h1>
 <%= link_to 'My Blog', controller: 'users' %>
 <%= link_to 'New article', new_user_path %>
+
 <h1>Listing User</h1>
 
 <table>
@@ -9,6 +10,7 @@
     <th>User</th>
     <th>Password</th>
     <th>Roll</th>
+    <th>link</th>
   </tr>
 
   <% @user.each do |user| %>
@@ -17,6 +19,7 @@
         <td><%= user.username %></td>
         <td><%= user.password %></td>
         <td><%= user.roll %></td>
+        <td><%= link_to 'view', user %></td>
       </tr>
   <% end %>
 </table>
