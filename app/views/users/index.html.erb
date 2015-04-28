@@ -1,21 +1,22 @@
-<h1>View Index</h1>
-<%= form_for :user, url: users_path do |f| %>
-    <p>
-      <%= f.label :UserName %><br>
-      <%= f.text_field :username %>
-    </p>
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'users' %>
+<%= link_to 'New article', new_user_path %>
+<h1>Listing User</h1>
 
-    <p>
-      <%= f.label :Password %><br>
-      <%= f.text_field :password %>
-    </p>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User</th>
+    <th>Password</th>
+    <th>Roll</th>
+  </tr>
 
-    <p>
-      <%= f.label :Roll %><br>
-      <%= f.text_field :roll %>
-    </p>
-
-    <p>
-      <%= f.submit %>
-    </p>
-<% end %>
+  <% @user.each do |user| %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.password %></td>
+        <td><%= user.roll %></td>
+      </tr>
+  <% end %>
+</table>
