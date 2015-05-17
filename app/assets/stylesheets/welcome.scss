@@ -1,3 +1,23 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background: rgba(61,61,61,1);
+  background: url(http://p1.pichost.me/i/6/1291969.jpg) no-repeat center center fixed;
+  /*http://www.jackiejohnston.us/iceharbor/bg-body.jpg*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #DBDBDB;
+}
+a {
+  color: #FFD500;
+}
+pre {
+
+  color: #FFE800;
+
+  background-color: rgba(245, 245, 245, 0);
+
+}
