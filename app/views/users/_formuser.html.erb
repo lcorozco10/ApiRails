@@ -1,34 +1,38 @@
-<%= form_for @user do |f| %>
+<%= form_for  @user do |f| %>
+
     <% if @user.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@user.errors.count, "error") %> prohibited
-            this user from being saved:</h2>
+        <div id="error_explanation" >
+
+          <div class=""></div>
+          <h4><p class="text-danger"><%= pluralize(@user.errors.count, "error") %> prohibited
+            this user from being saved:</p></h4> <p class="text-muted"></p>
+
           <ul>
             <% @user.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
+                <li><p class="text-warning"><%= msg %></p></li>
             <% end %>
           </ul>
         </div>
     <% end %>
-    <p>
-      <%= f.label :Username %><br>
-      <%= f.text_field :username %>
-    </p>
+
+    <div class="form-group">
+      <%= f.label :Username, for:"Username"  %><br>
+      <%= f.text_field :username, class:"form-control",id:"Username", placeholder:"Usernamel" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password, for:"Password"  %><br>
+      <%= f.password_field :password, class:"form-control",id:"Password", placeholder:"Password" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :password_confirmation, for:"password_confirmation"  %><br>
+      <%= f.password_field :password_confirmation, class:"form-control",id:"password_confirmation", placeholder:"password confirmation" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Roll, for:"Roll"  %><br>
+      <%= f.select :roll,['User', 'Admin'], {:selected=> 'User'}, class:"form-control",id:"Roll", placeholder:"Roll" %>
+    </div>
 
     <p>
-      <%= f.label :password %><br>
-      <%= f.password_field :password %>
-    </p>
-    <p>
-      <%= f.label :password_confirmation  %><br>
-      <%= f.password_field :password_confirmation %>
-    </p>
-    <p>
-        <%= f.label :Roll %><br>
-        <%= f.select :roll, ['User', 'Admin'], {:selected=> 'User'} %>
-    </p>
-
-    <p>
-      <%= f.submit %>
+      <%= f.submit class:"btn btn-default" ,value:"Save"%>
     </p>
 <% end %>

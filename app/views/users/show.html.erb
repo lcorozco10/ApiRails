@@ -1,21 +1,25 @@
-<h1>User Show </h1>
-<%= link_to 'Back', users_path %>
-| <%= link_to 'Edit', edit_user_path(@user) %>
-<p>
-  <strong>ID:</strong>
-  <%= @user.id %>
-</p>
-<p>
-  <strong>UserName:</strong>
-  <%= @user.username %>
-</p>
+<div class="table-responsive">
+<table class="table table-bordered">
+  <caption><h2>User Show</h2></caption>
+  <tr>
+    <td class="success">ID</td>
+    <td> <%= @user.id %></td>
 
-<p>
-  <strong>PassWord:</strong>
-  <%= @user.password %>
-</p>
-<p>
-  <strong>Roll:</strong>
-  <%= @user.roll %>
-</p>
+  </tr>
+  <tr>
+    <td class="success">UserName</td>
+    <td><%= @user.username %></td>
+  </tr>
+  <tr>
+    <td class="success">PassWord</td>
+    <td><%= @user.password %></td>
+  </tr>
+  <tr>
+    <td class="success">Roll</td>
+    <td><%= @user.roll %></td>
+  </tr>
 
+</table>
+</div>
+<%= link_to 'Back', users_path %> /
+<%= link_to 'Edit', edit_user_path(@user) %>

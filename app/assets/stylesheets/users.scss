@@ -1,3 +1,22 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.record-list{
+  margin-top: 40px;
+}
+table.table {
+  background: #f8f8f8;
+  color: darkslategrey;
+}
+table a {
+  color: darkcyan;
+}
+table.table tr th {
+  background: rgb(231, 231, 231);
+}
+td.success {
+  font-weight: bold;
+}
+caption h2 {
+  color: gold;
+}

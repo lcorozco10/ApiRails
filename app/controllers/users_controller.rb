@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  layout  'userlayouts'
+
+
   #Get Users all
   def index
     @user = User.all
